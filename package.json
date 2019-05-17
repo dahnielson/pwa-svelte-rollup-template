@@ -10,6 +10,12 @@
     "clean": "rimraf public/bundle.* public/index.html"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.8.0",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.17.2",
@@ -19,6 +25,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "npm-run-all": "^4.1.5",
     "rollup": "^1.10.1",
+    "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-node-resolve": "^4.2.3",
@@ -27,6 +34,23 @@
     "rimraf": "^2.6.3",
     "sirv-cli": "^0.4.0",
     "svelte": "^3.0.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry",
+          "corejs": "3.0.0"
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-class-properties"
+      ]
+    ],
+    "sourceMaps": true
   },
   "browserslist": [
     "last 2 versions",
@@ -43,6 +67,7 @@
       "serviceworker": true,
       "jest": true
     },
+    "parser": "babel-eslint",
     "parserOptions": {
       "ecmaVersion": 8,
       "ecmaFeatures": {
