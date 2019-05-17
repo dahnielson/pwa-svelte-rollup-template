@@ -1,20 +1,13 @@
-*Psst  looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
-
----
-
-# svelte app
-
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+# Template for Svelte PWA
 
 To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
 ```bash
-npx degit sveltejs/template svelte-app
+npx degit dahnielson/pwa-svelte-rollup-template svelte-app
 cd svelte-app
 ```
 
 *Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
 
 ## Get started
 
@@ -22,17 +15,16 @@ Install the dependencies...
 
 ```bash
 cd svelte-app
-npm install
+yarn install
 ```
 
 ...then start [Rollup](https://rollupjs.org):
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
-
 
 ## Deploying to the web
 
@@ -41,7 +33,7 @@ Navigate to [localhost:5000](http://localhost:5000). You should see your app run
 Install `now` if you haven't already:
 
 ```bash
-npm install -g now
+yarn global install now
 ```
 
 Then, from within your project folder:
@@ -57,12 +49,12 @@ As an alternative, use the [Now desktop client](https://zeit.co/download) and si
 Install `surge` if you haven't already:
 
 ```bash
-npm install -g surge
+yarn global install surge
 ```
 
 Then, from within your project folder:
 
 ```bash
-npm run build
+yarn build
 surge public
 ```
